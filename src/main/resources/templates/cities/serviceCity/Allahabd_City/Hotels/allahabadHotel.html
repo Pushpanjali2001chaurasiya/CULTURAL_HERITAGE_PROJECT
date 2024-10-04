@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hotel Page</title>
+
+
+</head>
+
+<body>
+	<section>
+		<div class="main-wrapper">
+
+			<header class="hero flex items-center">
+				<div class="container">
+					<div class="welcome flex items-center">
+						<span class="text-center text-white mx-auto">Welcome to Our Hotel</span>
+						<img src="./icons/logo-2.svg" alt="">
+					</div>
+					<h1 class="text-center text-white">The World Best Hotel in Allahabad</h1>
+					<!--<p class="text-center text-white mx-auto">Lorem Ipsum is simply dummy text of the printing and
+						typesetting industry. Lorem Ipsum has
+						been the
+						industry's standard dummy.</p>-->
+					<!--<div class="text-center mx-auto">
+						<button class="btn btn-primary">Read More</button>
+						<button class="btn btn-secondary">Book Now</button>
+					</div>
+-->
+				</div>
+			</header>
+		</div>
+		</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6" style="text-align: justify;">
+					<h1>About Us</h1>
+					<p>Welcome to Our Hotel, where luxury meets comfort. Established in [Year], we pride ourselves on
+						offering exceptional service and unforgettable experiences. Our hotel blends modern amenities
+						with a touch of local charm, ensuring every guest enjoys a unique stay.</p>
+					<p>Our dedicated team is here to cater to your needs and make your visit as pleasant as possible.
+						Whether you’re here for business or leisure, we aim to make your stay memorable.</p>
+					<p>Welcome to Our Hotel, where luxury meets comfort. Established in [Year], we pride ourselves on
+						offering exceptional service and unforgettable experiences. Our hotel blends modern amenities
+						with a touch of local charm, ensuring every guest enjoys a unique stay.</p>
+					<p>Our dedicated team is here to cater to your needs and make your visit as pleasant as possible.
+						Whether you’re here for business or leisure, we aim to make your stay memorable.</p>
+
+				</div>
+				<div class="col-md-6">
+
+					<img src="https://img.freepik.com/free-vector/flat-hotel-facade-background_23-2148157379.jpg"
+						alt="About Us" class="img-fluid custom-img h-75 w-100" style="border-radius: 10px;">
+				</div>
+			</div>
+		</div>
+		<section id="explore-food">
+			<div class="explore-food wrapper">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="text-content text-center">
+								<h1 class="text-primary mb-4">Explore Our Hotels</h1>
+								<p class="drop-in-2 px-5 mb-3">Hotels is located amidst the bustling streets of [Location], offering a unique blend of modern amenities and traditional Indian hospitality. At our hotel, you will experience an unparalleled level of luxury and comfort that will make your stay truly memorable. Whether you're here for a vacation or a business trip, we take special care of your comfort and convenience.
+									 The hotel is just a short distance from the city's major attractions, restaurants, and shopping centers."</p>
+							</div>
+						</div>
+					</div>
+					<div class="hotel-container">
+						<!-- Hotel Card 1 -->
+						<div class="hotel-card">
+							<div class="image-slider">
+								<img src="/hotels/images/1.jpg" alt="Hotel">
+								<img src="/hotels/images/2.jpg" alt="Hotel">
+								<img src="/hotels/images/3.jpg" alt="Hotel">
+							</div>
+							<div class="hotel-info">
+								<h2>Hotel Vitthal International</h2>
+								<p><strong>Distance:</strong> 900 m from Allahabad High Court</p>
+								<p><strong>Rating:</strong> 7.8</p>
+								<p class="review-summary">The Hotel Vitthal International has received positive reviews
+									for its good management, well-mannered staff, and spacious rooms. Guests recommend
+									the hotel and praise its location.</p>
+								<p class="price">₹2,000 onwards</p><br>
+								<th:block th:if="${user==null}">
+									<a href="/signin" class="view-deal">Book Now</a>
+								</th:block>
+								<th:block th:unless="${user==null}">
+									<a th:href="@{'https://rzp.io/l/B2GSBKK'}" class="view-deal">Book Now</a>
+								</th:block>
+
+							</div>
+						</div>
+
+						<!-- Hotel Card 2 -->
+						<div class="hotel-card">
+							<div class="image-slider">
+								<img src="/hotels/images/4.jpg" alt="Hotel">
+								<img src="/hotels/images/5.jpg" alt="Hotel">
+								<img src="/hotels/images/6.jpg" alt="Hotel">
+							</div>
+							<div class="hotel-info">
+								<h2>Hotel Kanha Shyam</h2>
+								<p><strong>Distance:</strong> 1.4 km from Prayagraj Junction</p>
+								<p><strong>Rating:</strong> 4.0</p>
+								<p class="review-summary">Hotel Kanha Shyam, Prayagraj, is a luxurious retreat away from
+									the hustle and bustle of the city life. With its glorious history and beautiful
+									tPrayagraj attracts a swarm of travelers to the city on a daily basis.</p>
+								<p class="price">₹1,800 onwards</p>
+								<th:block th:if="${user==null}">
+									<a href="/signin" class="view-deal">Book Now</a>
+								</th:block>
+								<th:block th:unless="${user==null}">
+									<a th:href="@{'https://rzp.io/l/B2GSBKK'}" class="view-deal">Book Now</a>
+								</th:block>
+							</div>
+						</div>
+
+						<!-- Hotel Card 2 -->
+						<div class="hotel-card">
+							<div class="image-slider">
+								<img src="/hotels/images/7.jpg" alt="Hotel">
+								<img src="/hotels/images/8.jpg" alt="Hotel">
+								<img src="/hotels/images/9.jpg" alt="Hotel">
+							</div>
+							<div class="hotel-info">
+								<h2>Hotel Polo Max</h2>
+								<p><strong>Distance:</strong> 1.5 km from Civil Line Bus Stand</p>
+								<p><strong>Rating:</strong> 3.0</p>
+								<p class="review-summary">Guests had a good stay at Hotel Shree Kanha Residency, with
+									compliments for excellent breakfast by the staff. The hotel rooms, staff,
+									check-in/out process, value for money, are highly appreciated.</p>
+								<p class="price">₹1,600 onwards</p>
+								<th:block th:if="${user==null}">
+									<a href="/signin" class="view-deal">Book Now</a>
+								</th:block>
+								<th:block th:unless="${user==null}">
+									<a th:href="@{'https://rzp.io/l/B2GSBKK'}" class="view-deal">Book Now</a>
+								</th:block>
+							</div>
+						</div>
+						<!-- Hotel Card 2 -->
+						<div class="hotel-card mb-5">
+							<div class="image-slider">
+								<img src="/hotels/images/10.jpg" alt="Hotel">
+								<img src="/hotels/images/11.jpg" alt="Hotel">
+								<img src="/hotels/images/12.jpg" alt="Hotel">
+							</div>
+							<div class="hotel-info ">
+								<h2>Grand Continental Hotel</h2>
+								<p><strong>Distance:</strong> 5 km from Prayag Railway Station</p>
+								<p><strong>Rating:</strong> 3.8</p>
+								<p class="review-summary">1.3 km from Allahabad Junction, 3.4 km from Swaraaj Bhawan,
+									Awarded Best Hotel in 2005 by UPHRA, Wi-Fi Situated in the heart of the city, Grand
+									Continental Hotel is a preferred accommodation option.</p>
+								<p class="price">₹1,900 onwards</p>
+								<a href="#" class="view-deal">Book Now</a>
+							</div>
+						</div>
+						<!-- Hotel Card 2 -->
+						<div class="hotel-card mb-5">
+							<div class="image-slider">
+								<img src="/hotels/images/13.jpg" alt="Hotel">
+								<img src="/hotels/images/14.jpg" alt="Hotel">
+								<img src="/hotels/images/15.jpg" alt="Hotel">
+							</div>
+							<div class="hotel-info">
+								<h2>Luxmi Hotel</h2>
+								<p><strong>Distance:</strong> 2-3 km from Prayagraj Junction</p>
+								<p><strong>Rating:</strong>3.8</p>
+								<p class="review-summary">Guests had a good stay at Hotel Shree Kanha Residency, with
+									compliments for excellent breakfast by the staff. The hotel rooms, staff,
+									check-in/out process, value for money, are highly appreciated.</p>
+								<p class="price">₹800 onwards</p>
+								<th:block th:if="${user==null}">
+									<a href="/signin" class="view-deal">Book Now</a>
+								</th:block>
+								<th:block th:unless="${user==null}">
+									<a th:href="@{'https://rzp.io/l/B2GSBKK'}" class="view-deal">Book Now</a>
+								</th:block>
+							</div>
+						</div>
+						<!-- Hotel Card 2 -->
+						<div class="hotel-card mb-5">
+							<div class="image-slider">
+								<img src="/hotels/images/16.jpg" alt="Hotel">
+								<img src="/hotels/images/17.jpg" alt="Hotel">
+								<img src="/hotels/images/18.jpg" alt="Hotel">
+							</div>
+							<div class="hotel-info">
+								<h2>Rahi Triveni Darshan </h2>
+								<p><strong>Distance:</strong> 3.5 km from Prayagraj Junction</p>
+								<p><strong>Rating:</strong> 3.4</p>
+								<p class="review-summary">Guests had a good stay at Hotel Shree Kanha Residency, with
+									compliments for excellent breakfast by the staff. The hotel rooms, staff,
+									check-in/out process, value for money, are highly appreciated.</p>
+								<p class="price">₹1,500 onwards</p>
+								<th:block th:if="${user==null}">
+									<a href="/signin" class="view-deal">Book Now</a>
+								</th:block>
+								<th:block th:unless="${user==null}">
+									<a th:href="@{'https://rzp.io/l/B2GSBKK'}" class="view-deal">Book Now</a>
+								</th:block>
+							</div>
+						</div>
+					</div>
+		</section>
+		<!-- **** Bootstrap JS **** -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"></script>
+
+		<script>
+			// JavaScript function to handle modal data population
+			function showModal(title, price, discount, imageUrl) {
+				document.getElementById('modalTitle').innerText = title;
+				document.getElementById('modalTime').innerText = time;
+				document.getElementById('modalPrice').innerText = '₹' + price;
+				document.getElementById('modalDiscount').innerText = '₹' + discount;
+				document.getElementById('modalImage').src = imageUrl;
+				const sliders = document.querySelectorAll('.image-slider');
+			}
+		</script>
+
+
+		<!-- **** Javascript **** -->
+
+
+
+</body>
+
+</html>
